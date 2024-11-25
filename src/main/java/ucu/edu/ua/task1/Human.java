@@ -1,13 +1,14 @@
 package ucu.edu.ua.task1;
 
 import lombok.Getter;
+import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
 enum Gender {
     MALE, FEMALE
 }
 
-@SuperBuilder @Getter
+@SuperBuilder @Getter @ToString
 public class Human {
     private String firstName;
     private String secondName;

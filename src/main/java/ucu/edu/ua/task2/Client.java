@@ -12,13 +12,13 @@ public class Client {
     private int id = counter++;
     private String name;
     private LocalDate dob;
-    private Gender gender;
+    private Sex sex;
     private String email;
 
-    public Client(String name, LocalDate dob, Gender gender, String email) {
+    public Client(String name, LocalDate dob, Sex sex, String email) {
         this.name = name;
         this.dob = dob;
-        this.gender = gender;
+        this.sex = sex;
         this.email = email;
     }
 }

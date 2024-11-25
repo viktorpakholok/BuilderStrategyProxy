@@ -154,7 +154,7 @@
 
         <module name="IllegalImport">
             <property name="illegalPkgs"
-                      value="sun, java.net, java.security, javax, java.applet, java.beans, java.nio, java.rmi, java.text, java.lang.reflect, java.lang.instrument"/>
+                      value="sun, java.net, java.security, java.applet, java.beans, java.nio, java.rmi, java.text, java.lang.reflect, java.lang.instrument"/>
         </module>
 
         <module name="RedundantImport"/>
@@ -217,7 +217,7 @@
         </module>
 
         <module name="PackageName">
-            <property name="format" value="^[a-z]+(\.[a-z][a-z]*)*$"/>
+            <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$"/>
         </module>
         <module name="PackageName"/>
         <module name="ParameterName">

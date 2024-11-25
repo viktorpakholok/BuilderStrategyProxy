@@ -32,14 +32,28 @@ public class MailSender {
                 .property(Emailv31.MESSAGES, new JSONArray()
                         .put(new JSONObject()
                                 .put(Emailv31.Message.FROM, new JSONObject()
-                                        .put("Email", "olesdobosevych@ucu.edu.ua")
-                                        .put("Name", "Oles"))
+                                    .put("Email", "olesdobosevych@ucu.edu.ua")
+                                    .put("Name", "Oles"))
                                 .put(Emailv31.Message.TO, new JSONArray()
-                                        .put(new JSONObject()
-                                                .put("Email", mailInfo.getClient().getEmail())
-                                                .put("Name", mailInfo.getClient().getName())))
+                                    .put(new JSONObject()
+                                        .put(
+                                            "Email", 
+                                            mailInfo.getClient().getEmail()
+                                        )
+                                        .put(
+                                            "Name", 
+                                            mailInfo.getClient().getName()
+                                        )
+                                    )
+                                )
                                 .put(Emailv31.Message.SUBJECT, "How can you?")
-                                .put(Emailv31.Message.HTMLPART, "<h3>Dear student<h3><br>You are being kicked out of Mailjet due to wrong behaviour. May the delivery force be with you!")));
+                                .put(
+                                    Emailv31.Message.HTMLPART, 
+                                    "<h3>Dear student<h3><br>You are being"
+                                    + "kicked out of Mailjet due to wrong"
+                                    + "behaviour. May the delivery force be"
+                                    + "with you!"
+                                )));
         response = client.post(request);
         // System.out.println(response.getStatus());
         // System.out.println(response.getData());
