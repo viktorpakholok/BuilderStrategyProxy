@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
 
         Client client = new Client("Oles", 
-            LocalDate.of(1991, 3, 14), 
+            LocalDate.of(YEAR_BIRTH, MONTH_BIRTH, DAY_BIRTH), 
             Sex.MALE, 
             "olesdobosevysch.gmail.com"
         );
