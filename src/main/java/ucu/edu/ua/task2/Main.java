@@ -1,18 +1,26 @@
-// package ucu.edu.ua.task2;
+package ucu.edu.ua.task2;
 
-// import java.time.LocalDate;
+import java.time.LocalDate;
 
-// import ucu.edu.ua.task2.mailcode.HappyBirthdayCode;
+import com.mailjet.client.errors.MailjetException;
 
-// public class Main {
-//     public static void main(String[] args) {
-//         Client client = new Client("Oles", LocalDate.of(1991, 3, 14), "Male");
+import ucu.edu.ua.task2.mailcode.HappyBirthdayCode;
 
-//         MailInfo mailInfo = new MailInfo(client, new HappyBirthdayCode());
+public class Main {
+    public static void main(String[] args) {
+        Client client = new Client("Oles", LocalDate.of(1991, 3, 14), Gender.MALE, "olesdobosevysch.gmail.com");
 
-//         System.out.println(mailInfo.generate());
+        MailInfo mailInfo = new MailInfo(client, new HappyBirthdayCode());
 
-//         MailSender sender = new MailSender();
-//         sender.sendEmail(mailInfo);
-//     }
-// }
+        System.out.println(mailInfo.generate());
+
+        MailSender sender = new MailSender();
+
+        try {
+            sender.sendMail(mailInfo);
+        } catch (MailjetException e) {
+            e.printStackTrace();
+        }
+
+    }
+}

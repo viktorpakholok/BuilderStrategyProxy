@@ -1,8 +1,5 @@
 package ucu.edu.ua.task2;
 
-import javax.mail.*;
-import javax.mail.internet.*;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 

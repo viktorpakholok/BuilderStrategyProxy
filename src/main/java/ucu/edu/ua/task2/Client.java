@@ -6,10 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-enum Gender {
-    MALE, FEMALE
-}
-
 @ToString @Getter @NoArgsConstructor
 public class Client {
     private static int counter = 0;
