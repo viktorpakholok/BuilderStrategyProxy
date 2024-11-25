@@ -8,9 +8,9 @@ import ucu.edu.ua.task2.mailcode.HappyBirthdayCode;
 
 public class Main {
 
-    private static int YEAR_BIRTH = 1991;
-    private static int MONTH_BIRTH = 3;
-    private static int DAY_BIRTH = 14;
+    private static final int YEAR_BIRTH = 1991;
+    private static final int MONTH_BIRTH = 3;
+    private static final int DAY_BIRTH = 14;
 
     public static void main(String[] args) {
 

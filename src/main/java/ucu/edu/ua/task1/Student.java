@@ -8,6 +8,9 @@ import java.util.List;
 
 @Getter @SuperBuilder
 public class Student extends Human {
+
+    private static final int BEGIN_INDEX = 5;
+
     @Singular
     private List<Integer> grades;
     @Singular
@@ -17,7 +20,7 @@ public class Student extends Human {
     public String toString() {
         String superRes = super.toString();
         return "Student" 
-        + superRes.substring(5, superRes.length()-1).toString() 
+        + superRes.substring(BEGIN_INDEX, superRes.length()-1).toString() 
         + ", grades=" + grades.toString() + ", mice=" + mice.toString() 
         + ", group=" + group.toString() + ")";
     }
